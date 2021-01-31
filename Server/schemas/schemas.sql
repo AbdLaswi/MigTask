@@ -10,7 +10,7 @@ USE CarRental;
 -- Table Cars
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Cars (
-    id INT UNIQE NOT NULL AUTO_INCREMENT,
+    id INT UNIQUE NOT NULL AUTO_INCREMENT,
     model VARCHAR(255) NOT NULL,
     company VARCHAR(255) NOT NULL,
     color VARCHAR(255) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Rented (
     renter VARCHAR(255) NOT NULL,
     rent_date_start VARCHAR(255) NOT NULL,
     rent_date_end VARCHAR(255) NOT NULL,
-    car_id UNIQE INT NOT NULL,
+    car_id INT UNIQUE NOT NULL,
     PRIMARY KEY (id, car_id),
     UNIQUE INDEX id_UNIQUE (id ASC),
     INDEX fk_rented_Cars1_idx (car_id ASC),
